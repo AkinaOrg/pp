@@ -1,0 +1,17 @@
+def whos_first(p1_shot, p2_shot):
+    # Видаляємо зайві пробіли з обох рядків
+    p1_shot = p1_shot.strip()
+    p2_shot = p2_shot.strip()
+    
+    # Порівнюємо очищені рядки і повертаємо результат
+    if p1_shot < p2_shot:
+        return "p1"
+    elif p1_shot > p2_shot:
+        return "p2"
+    else:
+        return "tie"
+
+# Приклади викликів функції:
+print(whos_first(" Bang! ", "          Bang! "))  # ➞ "p1"
+print(whos_first("                   Bang! ", "                 Bang! "))  # ➞ "p2"
+print(whos_first(" Bang! ", " Bang! "))  # ➞ "tie"
